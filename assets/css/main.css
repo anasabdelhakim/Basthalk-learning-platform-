@@ -321,6 +321,10 @@
   justify-content: center;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+.send-btn.teacher-show_more {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  background-color: var(--primary-color);
+}
 
 .teacher-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,

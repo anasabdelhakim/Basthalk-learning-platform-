@@ -7,7 +7,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out,
+  transition: background-color 0.3s ease-in-out, height 0.5s ease-in-out,
     border-bottom 0.3s ease-in-out;
   background-color: white;
   border-bottom: 2px solid transparent;
@@ -216,15 +216,16 @@ header .container {
 
 /* Landing buttons */
 .c-button {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   color: #000;
   font-weight: 700;
   text-decoration: none;
   padding: 0.9em 1.6em;
   cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
   z-index: 1;
 }
 .c-button.more {

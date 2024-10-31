@@ -1,0 +1,92 @@
+/* Applies box-sizing, padding, and margin reset to all elements */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+a {
+  color: var(--dark--color);
+}
+:root {
+  /* Define global CSS variables for spacing and colors */
+  --section-outer-space: 100px;
+  --section-inner-space: 100px;
+  --primary-color: rgb(17 186 240);
+  --dark--color: #080c14;
+  --danger--color: #ff3150;
+  --secoundery-color: #ffb003;
+  --third-color: #39b385;
+}
+p {
+  opacity: 0.8;
+}
+
+/* Set base font for the body */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Bold", sans-serif;
+  background-color: #f2f2f3;
+  color: var(--dark--color);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container class for responsive padding and centering content */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive container widths for different screen sizes */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.Section-title {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  width: 100%;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Section-title h1 {
+  padding: 10px 0;
+  margin: var(--section-outer-space) 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (max-width: 476px) {
+  .Section-title h1 {
+    font-size: 30px;
+  }
+}

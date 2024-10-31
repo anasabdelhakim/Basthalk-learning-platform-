@@ -1,0 +1,669 @@
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #f2f2f3;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
+    inset -6px -6px 10px 0 rgba(217, 217, 217, 0.6);
+}
+.cardBackground {
+  background-color: #080c14;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.Intro {
+  margin-bottom: var(--section-outer-space);
+}
+
+.Intro .card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+.Intro .card .card-box {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-align: right;
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: -5px -5px 8px rgba(8, 12, 20, 0.25),
+    5px 5px 8px rgba(34, 40, 50, 0.25);
+}
+.Intro .card .card-box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1 / span 2;
+}
+.Intro .card .card-box1 img {
+  max-width: 100%;
+  width: 120px;
+}
+.Intro .card .card-box1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.Intro .card .card-box1 .card-box-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: var(--danger--color);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 17px;
+  border: none;
+  padding: 4px 12px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.Intro .card .card-box1 .card-box-btn:hover {
+  color: var(--dark--color);
+}
+.Intro .card .card-box1 .card-box-btn i {
+  font-size: 17px;
+  transition: transform 0.3s ease-in-out;
+}
+.Intro .card .card-box1 .card-box-btn:hover i {
+  transform: translateX(-0.25rem);
+}
+
+.Intro .card .card-box h3 {
+  margin: 15px 0;
+}
+
+.Intro .card .card-box1 p {
+  margin: 15px 0;
+}
+
+.Intro .card .card-box i {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.Intro .card .card-box.card-box2 i {
+  background-color: var(--primary-color);
+}
+.Intro .card .card-box.card-box3 i {
+  background-color: var(--secoundery-color);
+}
+.Intro .card .card-box.card-box4 i {
+  background-color: var(--third-color);
+}
+.Intro .card .card-box.card-box5 i {
+  background-color: var(--danger--color);
+}
+
+@media (max-width: 768px) {
+  .Intro .card {
+    grid-template-columns: 1fr;
+  }
+  .Intro .card .card-box {
+    text-align: center;
+  }
+  .Intro .card .card-box1 img {
+    display: none;
+  }
+  .Intro .card .card-box1 {
+    grid-column: 1 / span 1;
+  }
+  .Intro .card .card-box1 .card-box-btn {
+    width: 100%;
+    font-size: 20px;
+  }
+  .Intro .card .card-box1 .card-box-btn i {
+    font-size: 20px;
+  }
+}
+@media (max-width: 476px) {
+  .Intro .card .card-box1 h1 {
+    font-size: 18px;
+  }
+  .Intro .card .card-box p {
+    font-size: 13px;
+  }
+}
+
+.classfications {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 45px;
+  width: 320px;
+}
+
+.select {
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+  color: white;
+  flex: 1;
+  overflow: hidden;
+}
+
+.selected {
+  transition: background-color 0.3s ease-in-out;
+  background-color: var(--danger--color);
+  padding: 10px;
+  height: 45px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 8;
+  font-size: 16px;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  border-right: 2px solid white;
+  position: absolute;
+  left: 0px;
+  height: 14px;
+  transform: rotate(90deg);
+  fill: white;
+  width: 25px;
+  z-index: 5;
+  transition: 300ms;
+}
+
+.options {
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--danger--color);
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  transition: 300ms;
+}
+.classfications > :nth-child(1) .selected {
+  background-color: var(--secoundery-color);
+}
+.classfications > :nth-child(1) .options {
+  background-color: var(--secoundery-color);
+}
+.classfications > :nth-child(1) .option {
+  background-color: var(--secoundery-color);
+}
+.classfications > :nth-child(1) .option:hover {
+  background-color: #ffc954;
+}
+
+.optionShowen {
+  opacity: 1;
+  top: 0;
+}
+
+.Rotatarrow {
+  transform: rotate(0deg);
+}
+
+.option {
+  border-radius: 5px;
+  padding: 10px;
+  transition: 300ms;
+  background-color: var(--danger--color);
+  font-size: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+.option:hover {
+  background-color: #ff4a65;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options label {
+  display: inline-block;
+}
+.options label::before {
+  content: attr(data-txt);
+}
+
+.options input[type="radio"]:checked + label {
+  display: none;
+}
+
+.options input[type="radio"]#all:checked + label {
+  display: none;
+}
+
+.select:has(.options input[type="radio"]#all:checked) .selected::before {
+  content: attr(data-default);
+}
+.select:has(.options input[type="radio"]#option-1:checked) .selected::before {
+  content: attr(data-one);
+}
+.select:has(.options input[type="radio"]#option-2:checked) .selected::before {
+  content: attr(data-two);
+}
+.select:has(.options input[type="radio"]#option-3:checked) .selected::before {
+  content: attr(data-three);
+}
+/* Teacher Section */
+#teacher-collection {
+  padding-top: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.Teachers {
+  margin: var(--section-outer-space) 0;
+}
+
+.Teachers-Options {
+  padding-bottom: 30px;
+  border-bottom: 4px solid #ccc;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.Teachers-Options-school_icon {
+  font-size: 50px;
+}
+
+.Teachers-input {
+  display: flex;
+  width: 320px;
+  height: 45px;
+  padding: 10px;
+  background-color: var(--third-color);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+.Teachers-input i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  color: white;
+  border-right: 2px solid white;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.Teachers-input--seach {
+  background-color: transparent;
+  text-align: end;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+}
+.Teachers-input--seach::placeholder {
+  color: white;
+}
+
+.teacher-card {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  z-index: 5;
+  cursor: pointer;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.teacher-card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  transform: translateY(-10px);
+}
+
+/* Teacher image styling */
+.teacher-image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.teacher-image img {
+  width: 75%;
+  max-width: 100%;
+}
+
+.teacher-image .featured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--red-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+.teacher-card p {
+  text-align: end;
+}
+
+/* Rating styling */
+.teacher-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.division {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-btn {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .Teachers-Options {
+    border-bottom: 2px solid #ccc;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .classfications {
+    width: 100%;
+  }
+  .Teachers-input {
+    width: 100%;
+  }
+  .Teachers-input {
+    margin-bottom: 50px;
+  }
+  .Teachers-input--seach {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  #teacher-collection {
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teacher-rating span {
+    font-size: 8px;
+  }
+  .teacher-card .division p {
+    font-size: 10px;
+  }
+  .teacher-rating {
+    flex-direction: column;
+  }
+  .teacher-image img {
+    width: 100%;
+  }
+}
+
+/* last section */
+
+.Contact-us {
+  position: relative;
+  margin: var(--section-outer-space) 0;
+}
+
+.Contact-us .card {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.Contact-us-form {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 20px;
+}
+.Contact-us-form button {
+  border: none;
+  background-color: var(--danger--color);
+  color: white;
+  width: 120px;
+  margin: 0 auto;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Contact-us-form-inputs {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.Contact-us-form-inputs input,
+.Contact-us-form-inputs textarea {
+  width: 100%;
+  border: 2px solid #ccc;
+  outline: none;
+  text-align: end;
+  font-size: 18px;
+  color: var(--dark--color);
+  padding: 10px;
+}
+.Contact-us-information {
+  display: flex;
+  text-align: right;
+  align-items: end;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+.Contact-us-information_User {
+  display: flex;
+  max-width: 400px;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: flex-start;
+}
+.Contact-us-information_User .Contact-us-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.Contact-us-information_User:nth-child(1) .Contact-us-icon {
+  background-color: var(--danger--color);
+}
+.Contact-us-information_User:nth-child(2) .Contact-us-icon {
+  background-color: var(--secoundery-color);
+}
+.Contact-us-information_User:nth-child(3) .Contact-us-icon {
+  background-color: var(--third-color);
+}
+.Contact-us-information_User i {
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.Contact-us-form-inputs textarea {
+  text-align: right;
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+}
+
+@media (max-width: 992px) {
+  .Contact-us .card {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .Contact-us-information {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    order: -1;
+  }
+  .Contact-us-information_User {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .Contact-us-information {
+    text-align: center;
+    justify-content: center;
+  }
+  .Contact-us-information_User {
+    flex-direction: column;
+  }
+  .Contact-us-information_User .Contact-us-icon {
+    order: -1;
+  }
+}
+.footer-preference {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  margin-top: var(--section-outer-space);
+  background-color: white;
+  position: relative;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer-preference .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--section-inner-space);
+}
+
+.description-preference {
+  text-align: center;
+  line-height: 2;
+  max-width: 400px;
+  margin-bottom: 50px;
+}
+
+.description-preference h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.title-preference {
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: var(--danger--color);
+}
+
+.nav-footer {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-footer li {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.nav-footer li:hover {
+  transform: translateX(-5px);
+  opacity: 1;
+}
+
+.data-user-preference {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-preference {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-preference i {
+  font-size: 25px;
+}
+
+/* Media query for screens with a max-width of 992px (tablets and small desktops) */
+@media (max-width: 992px) {
+  .data-user-preference {
+    align-items: center;
+    width: 100%;
+    margin: 50px 0px;
+  }
+  .footer-preference {
+    border-radius: 0;
+  }
+  .footer-preference .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .footer-preference .container .footer-nav {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .data-user-preference p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .title-preference {
+    font-size: 18px;
+  }
+  .nav-footer li a {
+    font-size: 13px;
+  }
+}

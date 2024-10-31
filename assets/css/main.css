@@ -454,9 +454,8 @@
   flex: 2;
   gap: 20px;
 }
-.Contact-us-form button {
+.send-btn {
   border: none;
-  background-color: var(--danger--color);
   color: white;
   width: 120px;
   margin: 0 auto;
@@ -465,6 +464,10 @@
   cursor: pointer;
   font-size: 16px;
 }
+.send-btn.contact {
+  background-color: var(--danger--color);
+}
+
 
 .Contact-us-form-inputs {
   display: grid;

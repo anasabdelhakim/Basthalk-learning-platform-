@@ -6,6 +6,8 @@
   text-decoration: none;
   list-style: none;
   font-weight: bold;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 button {

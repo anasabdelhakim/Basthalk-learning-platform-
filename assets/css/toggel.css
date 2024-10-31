@@ -16,8 +16,8 @@
   --stars-color: #fff;
   --clouds-color: #f3fdff;
   --back-clouds-color: #aacadf;
-  --transition: 0.3s ease-in-out;
-  --circle-transition: 0.3s ease-in-out;
+  --transition: 0.5s ease-in-out;
+  --circle-transition: 0.5s ease-in-out;
 }
 
 .theme-switch,

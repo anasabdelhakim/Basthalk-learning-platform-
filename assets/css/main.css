@@ -322,7 +322,6 @@
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .send-btn.teacher-show_more {
-  font-family: "Noto Kufi Arabic", sans-serif;
   background-color: var(--primary-color);
 }
 
@@ -462,7 +461,7 @@
   padding: 10px 25px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
 }
 .send-btn.contact {
   background-color: var(--danger--color);

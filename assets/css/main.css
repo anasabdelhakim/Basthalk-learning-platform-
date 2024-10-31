@@ -12,10 +12,6 @@
   background-color: #080c14;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.Intro {
-  margin-bottom: var(--section-outer-space);
-}
-
 .Intro .card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
@@ -99,6 +95,9 @@
 }
 
 @media (max-width: 768px) {
+   .Intro{
+     margin: 0;
+   }
   .Intro .card {
     grid-template-columns: 1fr;
   }
@@ -263,9 +262,6 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.Teachers {
-  margin: var(--section-outer-space) 0;
-}
 
 .Teachers-Options {
   padding-bottom: 30px;

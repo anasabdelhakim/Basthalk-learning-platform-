@@ -261,8 +261,6 @@
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
-
-
 .Teachers-Options {
   padding-bottom: 30px;
   border-bottom: 4px solid #ccc;
@@ -433,7 +431,6 @@
 
 .Contact-us {
   position: relative;
-  margin: var(--section-outer-space) 0;
 }
 
 .Contact-us .card {

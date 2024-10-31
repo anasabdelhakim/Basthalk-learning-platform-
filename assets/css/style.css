@@ -87,6 +87,8 @@ html {
 
 @media (max-width: 476px) {
   .Section-title h1 {
+    margin: 50px 0;
     font-size: 30px;
   }
 }
+

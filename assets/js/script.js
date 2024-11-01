@@ -98,6 +98,7 @@ function scrollToTopOfHeader() {
   const headerPosition = header.getBoundingClientRect().top;
   window.scrollTo({
     top: headerPosition,
+    behavior: "smooth",
   });
 }
 
@@ -111,6 +112,10 @@ const ShowenBorderHeader = () => {
     header.classList.add("removeBorder");
   }
 };
+const scrollToTopButton = document.getElementById("home");
+if (scrollToTopButton) {
+  scrollToTopButton.addEventListener("click", scrollToTopOfHeader);
+}
 
 // Check screen width to add/remove scroll event listener
 const checkScreenWidth = () => {

@@ -457,9 +457,9 @@
 .send-btn {
   border: none;
   color: white;
-  width: 120px;
+  width: 100px;
   margin: 0 auto;
-  padding: 10px 25px;
+  padding: 8px 15px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 18px;

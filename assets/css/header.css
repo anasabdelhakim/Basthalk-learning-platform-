@@ -309,10 +309,11 @@ header .container {
   width: 45%;
 }
 .Landing-page_left img {
+  background: #f0f0f0;
+  display: block;
   width: 100%;
-  max-width: 100%;
+  height: auto;
 }
-
 @media (max-width: 992px) {
   .Landing-page_right h2 {
     font-size: 3rem;

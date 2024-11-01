@@ -107,11 +107,12 @@
     display: none;
   }
   .Intro .card .card-box1 {
+    text-align: right;
     grid-column: 1 / span 1;
   }
   .Intro .card .card-box1 .card-box-btn {
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
   }
   .Intro .card .card-box1 .card-box-btn i {
     font-size: 20px;

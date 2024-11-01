@@ -136,10 +136,3 @@ window.addEventListener("scroll", ShowenBorderHeader);
 checkScreenWidth();
 window.addEventListener("resize", checkScreenWidth);
 Home.addEventListener("click", scrollToTopOfHeader);
-
-
-
-//main section
-
-
-

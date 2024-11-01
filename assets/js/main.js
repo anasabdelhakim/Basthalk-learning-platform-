@@ -45,7 +45,7 @@ for (let index = 1; index <= 8; index++) {
   teacherCardsHtml += `
            <div class="teacher-card">
             <div class="teacher-image">
-              <img src="assets/img/salah.webp" alt="Teacher Image" />
+              <img src="assets/img/salah_tiny_image(1).webp" alt="Teacher Image" />
             </div>
               <div class="teacher-rating">
                 <p class="">محمد صلاح</p>

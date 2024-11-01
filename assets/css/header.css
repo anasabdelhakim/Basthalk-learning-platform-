@@ -337,7 +337,7 @@ header .container {
     width: 100%;
   }
   .Landing-page_left img {
-    display:none;
+    margin-top:0;
    }
   .Landing-page_right {
     justify-content: center;

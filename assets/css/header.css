@@ -309,6 +309,7 @@ header .container {
   width: 45%;
 }
 .Landing-page_left img {
+  margin-top:50px;
   width: 100%;
   max-width: 100%;
 }
@@ -332,10 +333,12 @@ header .container {
   .Landing-page_left {
     width: 100%;
   }
-
   .Landing-page_right {
     width: 100%;
   }
+  .Landing-page_left img {
+    display:none;
+   }
   .Landing-page_right {
     justify-content: center;
     align-items: center;

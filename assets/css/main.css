@@ -415,6 +415,7 @@
     font-size: 10px;
   }
   .teacher-rating {
+    padding: 0 10px;
     flex-direction: column;
   }
   .teacher-image img {

@@ -71,11 +71,11 @@ function toggleTheme() {
   bodyElement.classList.toggle("dark-mode");
   toggleBtn.checked ? setDarkTheme() : setLightTheme();
 }
-
 // Event listener
 toggleBtn.addEventListener("change", toggleTheme);
 
 // Default values
+toggleBtn.checked = false;
 let prevScrollPos = 0;
 let isScrollListenerAdded = false;
 

@@ -313,7 +313,6 @@
 
 .teacher-card {
   font-family: "Noto Kufi Arabic", sans-serif;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -349,25 +348,13 @@
   width: 100%;
 }
 
-.teacher-image .featured {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--red-color);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: white;
-}
 .teacher-card p {
   text-align: end;
 }
 
 /* Rating styling */
 .teacher-rating {
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -375,6 +362,7 @@
   padding: 0;
 }
 .division {
+   padding: 0px 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -419,6 +407,9 @@
   }
   .teacher-rating span {
     font-size: 8px;
+  }
+  .teacher-card .division {
+    padding: 0 10px 10px;
   }
   .teacher-card .division p {
     font-size: 10px;

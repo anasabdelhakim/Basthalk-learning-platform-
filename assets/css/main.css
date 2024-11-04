@@ -527,6 +527,7 @@
   text-align: right;
   grid-column: 1 / span 2;
   grid-row: 3 / span 2;
+  resize: none;
 }
 
 @media (max-width: 992px) {

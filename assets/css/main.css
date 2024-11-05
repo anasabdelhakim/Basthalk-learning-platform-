@@ -399,7 +399,6 @@
 }
 
 @media (max-width: 576px) {
-
   #teacher-collection {
     gap: 0;
     grid-template-columns: repeat(2, 1fr);
@@ -548,6 +547,10 @@
   .Contact-us-information_User .Contact-us-icon {
     order: -1;
   }
+  .Contact-us-form-inputs input,
+  .Contact-us-form-inputs textarea {
+      font-size: 16px;
+   }
 }
 .footer-preference {
   font-family: "Noto Kufi Arabic", sans-serif;

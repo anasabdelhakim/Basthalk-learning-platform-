@@ -7,14 +7,13 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease-in-out, height 0.5s ease-in-out,
+  transition: var(--main-transition), height 0.5s ease-in-out,
     border-bottom 0.3s ease-in-out;
-  background-color: white;
+  background-color: var(--section-color);
   border-bottom: 2px solid transparent;
 }
 /* Js styling */
 .headerShowebar {
-  position: fixed;
   height: 90px;
 }
 .opacityHidden {
@@ -30,9 +29,6 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-.headerBackground {
-  background-color: var(--dark--color);
-}
 
 /* Left section in the layout */
 .Section__right {
@@ -41,12 +37,6 @@ header .container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Dark mode styles */
-.dark-mode {
-  background-color: var(--dark--color) !important;
-  color: white !important;
 }
 
 /* Navbar section */
@@ -79,25 +69,26 @@ header .container {
   border: none;
   padding: 0 0.75rem;
   width: 100%;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: var(--main-transition), var(--secoundery-transition);
+  z-index: 1000;
+}
+.navbar__signin-btn:hover {
+  color: black;
 }
 .navbar__signin-btn span {
   font-size: 16px;
 }
 
-/* Hover effect for sign-in button */
-.navbar__signin-btn:hover {
-  color: var(--dark--color);
-}
-
 /* Icon transition for sign-in button */
 .navbar__signin-btn i {
-  transition: transform 0.3s ease-in-out;
+  color: white;
+  transition: transform 0.3s ease-in-out, var(--secoundery-transition);
   margin-left: 0.5rem;
 }
 
 /* Icon movement on hover */
 .navbar__signin-btn:hover i {
+  color: black;
   transform: translateX(0.25rem);
 }
 
@@ -116,7 +107,6 @@ header .container {
   padding: 0 5px;
   display: flex;
   align-items: center;
-  color: black;
   height: 90px;
   border-bottom: 2px solid transparent;
   opacity: 0.5;
@@ -142,7 +132,6 @@ header .container {
   .nav_Menu {
     width: 100%;
     position: absolute;
-    z-index: -1;
     height: 70px;
     left: 50%;
     transform: translateX(-50%);
@@ -158,7 +147,7 @@ header .container {
     font-size: 15px;
   }
   .navbar-nav .nav-link {
-    margin-top: 4px;
+    margin-top: 3px;
     height: 70px;
   }
   .navbar-logo {
@@ -309,7 +298,6 @@ header .container {
   width: 45%;
 }
 .Landing-page_left img {
-  margin-top:50px;
   width: 100%;
   max-width: 100%;
 }
@@ -333,12 +321,10 @@ header .container {
   .Landing-page_left {
     width: 100%;
   }
+
   .Landing-page_right {
     width: 100%;
   }
-  .Landing-page_left img {
-    margin-top:0;
-   }
   .Landing-page_right {
     justify-content: center;
     align-items: center;
@@ -361,7 +347,7 @@ header .container {
   }
   .c-button--gooey,
   .c-button--gooey.btn-2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .Landing-page_right h2 {
     max-width: 100%;

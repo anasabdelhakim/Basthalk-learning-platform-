@@ -18,6 +18,7 @@ header {
 }
 .opacityHidden {
   opacity: 0;
+   visibility: hidden;
 }
 .removeBorder {
   border-bottom: 2px solid #ccc;
@@ -110,7 +111,7 @@ header .container {
   height: 90px;
   border-bottom: 2px solid transparent;
   opacity: 0.5;
-  transition: opacity 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {

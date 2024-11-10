@@ -159,6 +159,7 @@
   align-items: center;
   justify-content: end;
   flex-wrap: wrap;
+  z-index: 200;
 }
 
 .arrow {
@@ -175,8 +176,8 @@
 
 .options {
   transition: background-color 0.3s ease-in-out;
-  border: 2px solid #ccc;
   display: flex;
+  border: 2px solid #ccc;
   flex-direction: column;
   text-align: end;
   border-radius: 5px;
@@ -186,6 +187,7 @@
   top: -100px;
   opacity: 0;
   transition: 300ms;
+  z-index: 100;
 }
 .classfications > :nth-child(1) .selected {
   background-color: var(--inputs-color);
@@ -218,6 +220,7 @@
   width: 100%;
   transition: background-color 0.3s ease-in-out;
 }
+
 .option:hover {
   background-color: #24262c;
 }
@@ -451,7 +454,7 @@
   width: 100px;
   margin: 0 auto;
   padding: 8px 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
 }
@@ -550,6 +553,10 @@
   }
   .Contact-us-information_User .Contact-us-icon {
     order: -1;
+  }
+  .send-btn {
+    font-size: 16px;
+    padding: 7px;
   }
 }
 .footer-preference {

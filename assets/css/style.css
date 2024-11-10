@@ -41,6 +41,7 @@ button {
   --boxSizing-color: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1),
     inset -6px -6px 10px 0 rgba(217, 217, 217, 0.6);
   --danger--color: #ff3150;
+  --inputs-color: #080c14;
   --secoundery-color: #ffb003;
   --third-color: #39b385;
   --main-transition: background-color 0.3s ease-in-out;

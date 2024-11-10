@@ -145,7 +145,8 @@
 
 .selected {
   transition: background-color 0.3s ease-in-out;
-  background-color: var(--danger--color);
+  background-color: var(--inputs-color);
+  border: 2px solid #ccc;
   padding: 10px;
   height: 45px;
   margin-bottom: 3px;
@@ -179,23 +180,23 @@
   text-align: end;
   border-radius: 5px;
   padding: 5px;
-  background-color: var(--danger--color);
+  background-color: var(--inputs-color);
   position: relative;
   top: -100px;
   opacity: 0;
   transition: 300ms;
 }
 .classfications > :nth-child(1) .selected {
-  background-color: var(--secoundery-color);
+  background-color: var(--inputs-color);
 }
 .classfications > :nth-child(1) .options {
-  background-color: var(--secoundery-color);
+  background-color: var(--inputs-color);
 }
 .classfications > :nth-child(1) .option {
-  background-color: var(--secoundery-color);
+  background-color: var(--inputs-color);
 }
 .classfications > :nth-child(1) .option:hover {
-  background-color: #ffc954;
+  background-color: #24262c;
 }
 
 .optionShowen {
@@ -211,13 +212,13 @@
   border-radius: 5px;
   padding: 10px;
   transition: 300ms;
-  background-color: var(--danger--color);
+  background-color: var(--inputs-color);
   font-size: 15px;
   width: 100%;
   transition: background-color 0.3s ease-in-out;
 }
 .option:hover {
-  background-color: #ff4a65;
+  background-color: #24262c;
 }
 
 .options input[type="radio"] {
@@ -272,11 +273,12 @@
 }
 
 .Teachers-input {
+  border: 2px solid #ccc;
   display: flex;
   width: 320px;
   height: 45px;
   padding: 10px;
-  background-color: var(--third-color);
+  background-color: var(--inputs-color);
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -406,6 +408,7 @@
   .teacher-rating span {
     font-size: 8px;
   }
+
   .teacher-card .division p {
     font-size: 10px;
   }
@@ -547,10 +550,6 @@
   .Contact-us-information_User .Contact-us-icon {
     order: -1;
   }
-  .Contact-us-form-inputs input,
-  .Contact-us-form-inputs textarea {
-      font-size: 16px;
-   }
 }
 .footer-preference {
   font-family: "Noto Kufi Arabic", sans-serif;

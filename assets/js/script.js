@@ -6,34 +6,11 @@ const navbar = document.querySelector(".navbar-nav");
 const scrollToTopButton = document.getElementById("home");
 
 // Toggle theme function
-
 function toggleTheme() {
-  if (bodyElement.classList.contains("darkmode")) {
-    bodyElement.classList.remove("darkmode");
-    localStorage.setItem("theme", "light"); // Save preference
-  } else {
-    bodyElement.classList.add("darkmode");
-    localStorage.setItem("theme", "dark"); // Save preference
-  }
+  bodyElement.classList.toggle("darkmode");
 }
-
-// Check saved theme on page load
-function loadThemePreference() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    bodyElement.classList.add("darkmode");
-    toggleBtn.checked = true; // Ensure button matches the state
-  } else {
-    bodyElement.classList.remove("darkmode");
-    toggleBtn.checked = false; // Ensure button matches the state
-  }
-}
-
-// Event listener
 toggleBtn.addEventListener("change", toggleTheme);
 
-// On page load
-loadThemePreference();
 // Default values
 let prevScrollPos = 0;
 let isScrollListenerAdded = false;

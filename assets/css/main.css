@@ -5,7 +5,8 @@
   outline: none;
   background: var(--body-color);
   border-radius: 12px;
-
+  transition: box-shadow 0.3s ease-in-out, var(--main-transition);
+  box-shadow: var(--boxSizing-color);
 }
 .Intro .card {
   display: grid;
@@ -20,6 +21,9 @@
   height: 100%;
   padding: 20px;
   border-radius: 12px;
+  box-shadow: -5px -5px 8px rgba(8, 12, 20, 0.25),
+    5px 5px 8px rgba(70, 81, 101, 0.25);
+}
 }
 .Intro .card .card-box1 {
   display: flex;
